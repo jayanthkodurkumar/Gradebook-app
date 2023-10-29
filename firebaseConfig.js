@@ -3,10 +3,10 @@ import { initializeApp } from "firebase/app";
 import { getFirestore } from "firebase/firestore";
 // TODO: Add SDKs for Firebase products that you want to use
 // https://firebase.google.com/docs/web/setup#available-libraries
-
+const apiKey = process.env.API_KEY;
 // Your web app's Firebase configuration
 const firebaseConfig = {
-  apiKey: "AIzaSyCVFci0bhg6D1GalWhmGv_HEH6MPB8tCYQ",
+  apiKey: apiKey,
   authDomain: "gradebook-23400.firebaseapp.com",
   projectId: "gradebook-23400",
   storageBucket: "gradebook-23400.appspot.com",
