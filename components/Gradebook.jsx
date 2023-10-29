@@ -4,6 +4,7 @@ import {
   SafeAreaView,
   StyleSheet,
   Text,
+  ScrollView,
   View,
 } from "react-native";
 import React from "react";
@@ -47,17 +48,11 @@ const Gradebook = ({ student }) => {
         <Text style={styles.titleText}>Z101: Mobile Programming</Text>
       </View>
       <View style={styles.flatList}>
-        <FlatList
-          data={student}
-          renderItem={({ item }) => {
-            return (
-              <>
-                <StudentItem key={item.id} student={item} />
-              </>
-            );
-          }}
-          keyExtractor={(item) => item.id}
-        />
+        <ScrollView>
+          {student.map((item) => (
+            <StudentItem key={item.id} student={item} />
+          ))}
+        </ScrollView>
       </View>
     </SafeAreaView>
   );
